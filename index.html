@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaigaCrypto - Real-Time Crypto Exchange</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header Section with Logo and Currency Selector -->
+  <header>
+    <div class="logo">
+      <h1>TaigaCrypto</h1>
+    </div>
+    <div class="theme-toggle">
+      <label for="theme-toggle-checkbox">🌙/🌞</label>
+      <input type="checkbox" id="theme-toggle-checkbox">
+    </div>
+    <div class="currency">
+      <label for="currency-select">Currency: </label>
+      <select id="currency-select">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="gbp">GBP</option>
+        <option value="inr">INR</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Section -->
+  <div class="dashboard">
+    <!-- Search Bar and Trending Section -->
+    <section class="search-trending">
+      <input type="text" id="crypto-search" placeholder="Search for cryptocurrency...">
+      <h3>Trending Cryptocurrencies</h3>
+      <ul id="trending-cryptos"></ul>
+    </section>
+
+    <!-- Crypto Market Data Table -->
+    <section class="market-data">
+      <h2>Top Cryptocurrencies</h2>
+      <table id="crypto-table">
+        <thead>
+          <tr>
+            <th>Cryptocurrency</th>
+            <th>Price</th>
+            <th>Change (24h)</th>
+            <th>Volume</th>
+            <th>Market Cap</th>
+          </tr>
+        </thead>
+        <tbody id="crypto-table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- Price History and Price Alerts -->
+    <section class="price-history-alerts">
+      <h2>Price Trend (24h)</h2>
+      <canvas id="priceChart"></canvas>
+
+      <h3>Set Price Alerts</h3>
+      <form id="price-alert-form">
+        <input type="text" id="alert-crypto" placeholder="Enter Crypto (e.g., Bitcoin)">
+        <input type="number" id="alert-price" placeholder="Set Alert Price">
+        <button type="submit">Set Alert</button>
+      </form>
+    </section>
+
+    <!-- Market News Section -->
+    <section class="market-news">
+      <h2>Latest Cryptocurrency News</h2>
+      <ul id="news-list"></ul>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024 TaigaCrypto. All rights reserved.</p>
+  </footer>
+
+  <!-- Include the app.js file -->
+  <script src="script.js"></script>
+</body>
+</html>
